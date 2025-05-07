@@ -1,0 +1,92 @@
+Aturan Decision Tree:
+|--- Temperature <= 9.00
+|   |--- Visibility (km) <= 6.50
+|   |   |--- Precipitation (%) <= 47.50
+|   |   |   |--- Precipitation (%) <= 26.50
+|   |   |   |   |--- class: 4
+|   |   |   |--- Precipitation (%) >  26.50
+|   |   |   |   |--- class: 1
+|   |   |--- Precipitation (%) >  47.50
+|   |   |   |--- Atmospheric Pressure <= 928.62
+|   |   |   |   |--- class: 3
+|   |   |   |--- Atmospheric Pressure >  928.62
+|   |   |   |   |--- class: 4
+|   |--- Visibility (km) >  6.50
+|   |   |--- Visibility (km) <= 17.50
+|   |   |   |--- UV Index <= 2.00
+|   |   |   |   |--- class: 2
+|   |   |   |--- UV Index >  2.00
+|   |   |   |   |--- class: 3
+|   |   |--- Visibility (km) >  17.50
+|   |   |   |--- class: 1
+|--- Temperature >  9.00
+|   |--- Visibility (km) <= 4.75
+|   |   |--- UV Index <= 2.50
+|   |   |   |--- Atmospheric Pressure <= 1000.50
+|   |   |   |   |--- Atmospheric Pressure <= 999.28
+|   |   |   |   |   |--- class: 3
+|   |   |   |   |--- Atmospheric Pressure >  999.28
+|   |   |   |   |   |--- class: 2
+|   |   |   |--- Atmospheric Pressure >  1000.50
+|   |   |   |   |--- class: 3
+|   |   |--- UV Index >  2.50
+|   |   |   |--- Atmospheric Pressure <= 1011.05
+|   |   |   |   |--- Atmospheric Pressure <= 1005.93
+|   |   |   |   |   |--- Precipitation (%) <= 74.50
+|   |   |   |   |   |   |--- Temperature <= 14.50
+|   |   |   |   |   |   |   |--- class: 3
+|   |   |   |   |   |   |--- Temperature >  14.50
+|   |   |   |   |   |   |   |--- class: 4
+|   |   |   |   |   |--- Precipitation (%) >  74.50
+|   |   |   |   |   |   |--- class: 3
+|   |   |   |   |--- Atmospheric Pressure >  1005.93
+|   |   |   |   |   |--- Atmospheric Pressure <= 1008.33
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |--- Atmospheric Pressure >  1008.33
+|   |   |   |   |   |   |--- Temperature <= 30.50
+|   |   |   |   |   |   |   |--- class: 3
+|   |   |   |   |   |   |--- Temperature >  30.50
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |--- Atmospheric Pressure >  1011.05
+|   |   |   |   |--- Visibility (km) <= 1.75
+|   |   |   |   |   |--- class: 3
+|   |   |   |   |--- Visibility (km) >  1.75
+|   |   |   |   |   |--- UV Index <= 12.50
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- UV Index >  12.50
+|   |   |   |   |   |   |--- class: 2
+|   |--- Visibility (km) >  4.75
+|   |   |--- UV Index <= 4.50
+|   |   |   |--- Temperature <= 37.50
+|   |   |   |   |--- Precipitation (%) <= 53.50
+|   |   |   |   |   |--- class: 2
+|   |   |   |   |--- Precipitation (%) >  53.50
+|   |   |   |   |   |--- Visibility (km) <= 7.50
+|   |   |   |   |   |   |--- class: 3
+|   |   |   |   |   |--- Visibility (km) >  7.50
+|   |   |   |   |   |   |--- class: 4
+|   |   |   |--- Temperature >  37.50
+|   |   |   |   |--- class: 1
+|   |   |--- UV Index >  4.50
+|   |   |   |--- Atmospheric Pressure <= 1004.23
+|   |   |   |   |--- Visibility (km) <= 5.75
+|   |   |   |   |   |--- class: 3
+|   |   |   |   |--- Visibility (km) >  5.75
+|   |   |   |   |   |--- Precipitation (%) <= 54.00
+|   |   |   |   |   |   |--- Atmospheric Pressure <= 871.33
+|   |   |   |   |   |   |   |--- class: 2
+|   |   |   |   |   |   |--- Atmospheric Pressure >  871.33
+|   |   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- Precipitation (%) >  54.00
+|   |   |   |   |   |   |--- class: 2
+|   |   |   |--- Atmospheric Pressure >  1004.23
+|   |   |   |   |--- Visibility (km) <= 10.25
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- Visibility (km) >  10.25
+|   |   |   |   |   |--- Precipitation (%) <= 48.50
+|   |   |   |   |   |   |--- class: 1
+|   |   |   |   |   |--- Precipitation (%) >  48.50
+|   |   |   |   |   |   |--- Precipitation (%) <= 64.00
+|   |   |   |   |   |   |   |--- class: 4
+|   |   |   |   |   |   |--- Precipitation (%) >  64.00
+|   |   |   |   |   |   |   |--- class: 2
